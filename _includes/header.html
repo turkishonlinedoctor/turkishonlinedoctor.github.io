@@ -1,0 +1,48 @@
+{%- assign t = site.data.t[site.active_lang] -%}
+
+{%- comment -%}
+  Build the counterpart URL for the language switcher.
+  The leading space inside href=" ..." stops jekyll-polyglot from
+  re-prepending the active language to the link (a documented quirk).
+{%- endcomment -%}
+{%- assign base_url = page.url -%}
+{%- if base_url contains '/en/' or base_url == '/en' or base_url == '/en/' -%}
+  {%- assign base_url = base_url | remove_first: '/en' -%}
+{%- endif -%}
+{%- if base_url == '' -%}{%- assign base_url = '/' -%}{%- endif -%}
+{%- assign en_url = '/en' | append: base_url -%}
+{%- if site.active_lang == 'en' -%}
+  {%- assign switch_url = base_url -%}
+{%- else -%}
+  {%- assign switch_url = en_url -%}
+{%- endif -%}
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark">🩺</span>
+      <span class="brand-text">
+        <span class="brand-name">{{ site.name }}</span>
+        <span class="brand-role">{% if site.active_lang == 'tr' %}{{ site.role_tr }}{% else %}{{ site.role_en }}{% endif %}</span>
+      </span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </label>
+
+    {%- comment -%}
+      Same slug for both languages; polyglot auto-prepends /en during the
+      English build, so these root-absolute links stay in the active language.
+    {%- endcomment -%}
+    <nav class="site-nav">
+      <a href="/">{{ t.nav.home }}</a>
+      <a href="/about/">{{ t.nav.about }}</a>
+      <a href="/services/">{{ t.nav.services }}</a>
+      <a href="/contact/">{{ t.nav.contact }}</a>
+      <a class="nav-cta" href="/booking/">{{ t.nav.booking }}</a>
+      <a class="lang-switch" href=" {{ switch_url }}" hreflang="{% if site.active_lang == 'tr' %}en{% else %}tr{% endif %}">{{ t.switch_to }}</a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,35 @@
+---
+layout: legal
+permalink: /legal/kvkk/
+head_tr: "KVKK Aydınlatma Metni"
+head_en: "Data Protection Notice (KVKK)"
+---
+{% if site.active_lang == 'tr' %}
+<p>6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) kapsamında, veri sorumlusu <strong>{{ site.name }}</strong> olarak kişisel verilerinizi aşağıda açıklanan çerçevede işliyoruz.</p>
+<h2>İşlenen veriler</h2>
+<ul>
+  <li>İletişim formu: ad, e-posta ve mesaj içeriği.</li>
+  <li>Randevu/ödeme: randevu bilgileri; ödemeler <strong>iyzico</strong> üzerinden alınır ve kart bilgileriniz tarafımızca görülmez/saklanmaz.</li>
+</ul>
+<div class="notice danger"><strong>Sağlık verileri özel niteliklidir.</strong> Lütfen belirti, teşhis, ilaç veya tıbbi geçmiş gibi bilgileri iletişim formu üzerinden PAYLAŞMAYIN. Bu tür veriler yalnızca açık rızanıza dayalı, güvenli bir kanal üzerinden işlenir.</div>
+<h2>İşleme amaçları ve hukuki sebep</h2>
+<p>Verileriniz; talebinize dönüş yapmak, randevu ve hizmet süreçlerini yürütmek amacıyla, KVKK m.5/m.6 kapsamındaki hukuki sebeplere (ve gerekli hallerde açık rızanıza) dayanılarak işlenir.</p>
+<h2>Aktarım</h2>
+<p>Veriler; form altyapısı (ör. Web3Forms), takvim (ör. Cal.com), ödeme kuruluşu (iyzico) ve görüntülü görüşme (ör. Doxy.me) gibi hizmet sağlayıcılarla, yalnızca hizmetin gerektirdiği ölçüde paylaşılabilir. Yurt dışı aktarımlarda KVKK’nın ilgili hükümleri uygulanır.</p>
+<h2>Haklarınız (KVKK m.11)</h2>
+<p>Verilerinize erişme, düzeltme, silme ve işlemeye itiraz etme haklarına sahipsiniz. Başvurularınızı <a href="mailto:{{ site.email }}">{{ site.email }}</a> adresine iletebilirsiniz.</p>
+{% else %}
+<p>Under Turkey’s Personal Data Protection Law No. 6698 (“KVKK”), the data controller <strong>{{ site.name }}</strong> processes your personal data as described below.</p>
+<h2>Data we process</h2>
+<ul>
+  <li>Contact form: name, email and message content.</li>
+  <li>Booking/payment: appointment details; payments are taken via <strong>iyzico</strong> and your card details are never seen or stored by us.</li>
+</ul>
+<div class="notice danger"><strong>Health data is special-category.</strong> Please do NOT share symptoms, diagnoses, medication or medical history via the contact form. Such data is processed only through a secure channel and on the basis of your explicit consent.</div>
+<h2>Purposes and legal basis</h2>
+<p>Your data is processed to respond to your request and to run appointment and service processes, on the legal bases set out in KVKK Art. 5/6 (and, where required, your explicit consent).</p>
+<h2>Transfers</h2>
+<p>Data may be shared, only to the extent the service requires, with providers such as the form backend (e.g. Web3Forms), scheduler (e.g. Cal.com), payment institution (iyzico) and video tool (e.g. Doxy.me). Cross-border transfers follow the relevant provisions of KVKK.</p>
+<h2>Your rights (KVKK Art. 11)</h2>
+<p>You have the right to access, correct, delete and object to the processing of your data. Requests can be sent to <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+{% endif %}

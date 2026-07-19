@@ -1,0 +1,27 @@
+---
+layout: legal
+permalink: /legal/privacy/
+head_tr: "Gizlilik Politikası"
+head_en: "Privacy Policy"
+---
+{% if site.active_lang == 'tr' %}
+<p>Bu Gizlilik Politikası, {{ site.name }} web sitesini kullandığınızda verilerinizin nasıl işlendiğini açıklar. AB’de ikamet eden ziyaretçiler için GDPR, Türkiye için KVKK hükümleri geçerlidir. Ayrıntılar için <a href="/legal/kvkk/">KVKK Aydınlatma Metni</a>’ne bakınız.</p>
+<h2>Çerezler</h2>
+<p>Site temel işlevler için minimum düzeyde çerez kullanır. Gömülü hizmetler (takvim, ödeme, video) kendi çerezlerini kullanabilir.</p>
+<h2>Üçüncü taraf hizmetler</h2>
+<p>Barındırma (GitHub Pages), form (Web3Forms), randevu (Cal.com), ödeme (iyzico) ve görüntülü görüşme (Doxy.me) gibi sağlayıcılar kullanılabilir. Her biri kendi gizlilik politikasına tabidir.</p>
+<h2>Saklama</h2>
+<p>Veriler yalnızca ilgili amaç için gereken süre boyunca saklanır.</p>
+<h2>İletişim</h2>
+<p>Gizlilikle ilgili sorularınız için: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+{% else %}
+<p>This Privacy Policy explains how your data is handled when you use the {{ site.name }} website. GDPR applies to visitors resident in the EU and KVKK applies in Turkey. For details, see the <a href="/legal/kvkk/">Data Protection Notice (KVKK)</a>.</p>
+<h2>Cookies</h2>
+<p>The site uses minimal cookies for basic functionality. Embedded services (scheduler, payment, video) may set their own cookies.</p>
+<h2>Third-party services</h2>
+<p>Providers such as hosting (GitHub Pages), forms (Web3Forms), scheduling (Cal.com), payment (iyzico) and video (Doxy.me) may be used. Each is subject to its own privacy policy.</p>
+<h2>Retention</h2>
+<p>Data is retained only for as long as necessary for the relevant purpose.</p>
+<h2>Contact</h2>
+<p>For privacy questions: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+{% endif %}

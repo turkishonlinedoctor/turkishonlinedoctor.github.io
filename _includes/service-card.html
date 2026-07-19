@@ -1,0 +1,18 @@
+{%- comment -%} Expects `include.service` (one entry from _data/services.yml) {%- endcomment -%}
+{%- assign s = include.service -%}
+{%- assign t = site.data.t[site.active_lang] -%}
+{%- if s.book_url and s.book_url != "" -%}
+  {%- assign book_href = s.book_url -%}
+{%- else -%}
+  {%- assign book_href = "/booking/" -%}
+{%- endif -%}
+<article class="service-card" id="{{ s.id }}">
+  <div class="service-icon" aria-hidden="true">{{ s.icon }}</div>
+  <h3 class="service-title">{% if site.active_lang == 'tr' %}{{ s.title_tr }}{% else %}{{ s.title_en }}{% endif %}</h3>
+  <p class="service-meta">{% if site.active_lang == 'tr' %}{{ s.duration_tr }}{% else %}{{ s.duration_en }}{% endif %}</p>
+  <p class="service-desc">{% if site.active_lang == 'tr' %}{{ s.desc_tr }}{% else %}{{ s.desc_en }}{% endif %}</p>
+  <div class="service-foot">
+    <span class="service-price"><span class="muted small">{{ t.services.from }}</span> {{ s.price }}</span>
+    <a class="btn btn-small" href="{{ book_href }}">{{ t.services.book }}</a>
+  </div>
+</article>

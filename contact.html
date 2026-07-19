@@ -1,0 +1,51 @@
+---
+layout: default
+permalink: /contact/
+head_tr: "İletişim"
+head_en: "Contact"
+---
+{% assign t = site.data.t[site.active_lang] %}
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>{{ t.contact.title }}</h1>
+    <p class="lead">{{ t.contact.intro }}</p>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="wrap">
+    <div class="notice danger" style="max-width:560px">⚠ {{ t.contact.warning }}</div>
+
+    {% if site.forms.web3forms_key and site.forms.web3forms_key != "" %}
+    <form class="form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="{{ site.forms.web3forms_key }}">
+      <input type="hidden" name="subject" value="New message from {{ site.name }} website">
+      <input type="hidden" name="from_name" value="{{ site.name }} website">
+      <!-- honeypot: bots fill this, humans don't -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+
+      <label for="name">{{ t.contact.name }}</label>
+      <input id="name" type="text" name="name" required autocomplete="name">
+
+      <label for="email">{{ t.contact.email }}</label>
+      <input id="email" type="email" name="email" required autocomplete="email">
+
+      <label for="message">{{ t.contact.message }}</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <label class="consent">
+        <input type="checkbox" required>
+        <span>{{ t.contact.consent }}</span>
+      </label>
+
+      <button class="btn" type="submit">{{ t.contact.send }}</button>
+    </form>
+    {% else %}
+    <div class="notice warn" style="max-width:560px">
+      {{ t.contact.no_key }}
+      {% if site.email != "" and site.email != "info@example.com" %}<br><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>

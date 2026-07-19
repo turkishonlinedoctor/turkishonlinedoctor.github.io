@@ -1,0 +1,28 @@
+---
+layout: default
+permalink: /services/
+head_tr: "Hizmetler"
+head_en: "Services"
+---
+{% assign t = site.data.t[site.active_lang] %}
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>{{ t.services.title }}</h1>
+    <p class="lead">{{ t.services.intro }}</p>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="wrap">
+    <div class="service-grid">
+      {% for s in site.data.services %}{% include service-card.html service=s %}{% endfor %}
+    </div>
+
+    <div class="prose" style="margin-top:2.6rem">
+      <div class="notice">{{ t.booking.pay_note }}</div>
+      <div class="notice danger">{{ t.disclaimer.short }}</div>
+      <p style="margin-top:1.6rem"><a class="btn" href="/booking/">{{ t.hero.cta_primary }}</a></p>
+    </div>
+  </div>
+</section>

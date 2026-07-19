@@ -1,0 +1,53 @@
+---
+layout: default
+permalink: /booking/
+head_tr: "Randevu Al"
+head_en: "Book an appointment"
+---
+{% assign t = site.data.t[site.active_lang] %}
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>{{ t.booking.title }}</h1>
+    <p class="lead">{{ t.booking.intro }}</p>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="wrap">
+
+    {% if site.booking.cal_url and site.booking.cal_url != "" %}
+      {%- comment -%} Cal.com booking widget. Timezones are handled automatically. {%- endcomment -%}
+      <div class="embed-frame">
+        <iframe src="{{ site.booking.cal_url }}" title="Booking calendar"
+                style="width:100%;height:640px;border:0" loading="lazy"></iframe>
+      </div>
+    {% else %}
+      <div class="notice warn">
+        <strong>{{ t.booking.no_cal }}</strong><br>
+        <a href="/contact/">{{ t.nav.contact }}</a>
+        {% if site.email != "" and site.email != "info@example.com" %} · <a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
+      </div>
+    {% endif %}
+
+    <div class="prose" style="margin-top:2.4rem">
+      <h2>{{ t.how.title }}</h2>
+      <ol>
+        {% for step in t.how.steps %}<li>{{ step.body }}</li>{% endfor %}
+      </ol>
+
+      <div class="notice">{{ t.booking.pay_note }}</div>
+
+      {% if site.payments.iyzilink_url and site.payments.iyzilink_url != "" %}
+      <p>
+        <a class="btn" href="{{ site.payments.iyzilink_url }}" target="_blank" rel="noopener">
+          {% if site.active_lang == 'tr' %}Güvenli Ödeme (iyzico){% else %}Secure payment (iyzico){% endif %} →
+        </a>
+      </p>
+      <p class="muted small">{% if site.active_lang == 'tr' %}{{ site.payments.currency_note_tr }}{% else %}{{ site.payments.currency_note_en }}{% endif %}</p>
+      {% endif %}
+
+      <div class="notice danger">{{ t.emergency.text }}</div>
+    </div>
+  </div>
+</section>

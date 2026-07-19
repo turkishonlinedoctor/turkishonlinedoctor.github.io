@@ -1,0 +1,35 @@
+{%- assign t = site.data.t[site.active_lang] -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f5d5b">
+
+{%- if site.active_lang == 'tr' and page.head_tr -%}
+  {%- assign page_title = page.head_tr -%}
+{%- elsif site.active_lang == 'en' and page.head_en -%}
+  {%- assign page_title = page.head_en -%}
+{%- else -%}
+  {%- assign page_title = page.title | default: t.hero.title -%}
+{%- endif -%}
+<title>{{ page_title }} · {{ site.name }}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ t.hero.subtitle }}{% endif %}">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ t.hero.subtitle }}{% endif %}">
+<meta property="og:locale" content="{% if site.active_lang == 'tr' %}tr_TR{% else %}en_US{% endif %}">
+
+<!-- hreflang alternates: same page in the other language -->
+{%- assign base_url = page.url -%}
+{%- if base_url contains '/en/' or base_url == '/en' or base_url == '/en/' -%}
+  {%- assign base_url = base_url | remove_first: '/en' -%}
+{%- endif -%}
+{%- if base_url == '' -%}{%- assign base_url = '/' -%}{%- endif -%}
+{%- assign en_url = '/en' | append: base_url -%}
+<link rel="alternate" hreflang="tr" href="{{ base_url | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ base_url | absolute_url }}">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>">
+<link rel="stylesheet" href="/assets/css/main.css">

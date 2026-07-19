@@ -1,0 +1,50 @@
+# ═══════════════════════════════════════════════════════════════════
+#  Your service menu. Add/remove entries freely.
+#  - price: shown as-is (put whatever currencies you like)
+#  - book_url: leave blank to use the Booking page, or paste a direct
+#    Cal.com event link / iyziLink here for a per-service button.
+# ═══════════════════════════════════════════════════════════════════
+
+- id: video
+  icon: "🩺"
+  price: "₺___ / €__"
+  duration_tr: "20–30 dk görüntülü görüşme"
+  duration_en: "20–30 min video call"
+  title_tr: "Online Video Görüşme"
+  title_en: "Online Video Consultation"
+  desc_tr: "Genel sağlık sorunlarınız için hekimle birebir görüntülü görüşme. Endişelerinizi konuşun, sorularınızı sorun ve atmanız gereken adımlar için yönlendirme alın."
+  desc_en: "A one-to-one video consultation for your general health concerns. Talk through your worries, ask your questions, and get guidance on the next steps to take."
+  book_url: ""
+
+- id: second-opinion
+  icon: "📋"
+  price: "₺___ / €__"
+  duration_tr: "Yazılı ve/veya görüşmeli değerlendirme"
+  duration_en: "Written and/or verbal review"
+  title_tr: "İkinci Görüş"
+  title_en: "Second Opinion"
+  desc_tr: "Mevcut bir teşhis veya tedavi planı hakkında bağımsız bir hekim görüşü. Kararlarınızı daha rahat verebilmeniz için durumunuzu birlikte gözden geçirelim."
+  desc_en: "An independent physician's perspective on an existing diagnosis or treatment plan. We review your situation together so you can make decisions with more confidence."
+  book_url: ""
+
+- id: test-review
+  icon: "🔬"
+  price: "₺___ / €__"
+  duration_tr: "Tetkik ve tahlil değerlendirmesi"
+  duration_en: "Lab & imaging report review"
+  title_tr: "Tahlil & Tetkik Değerlendirme"
+  title_en: "Test & Result Review"
+  desc_tr: "Kan tahlilleri, görüntüleme raporları ve diğer tetkiklerinizin sade bir dille açıklanması. Sonuçların ne anlama geldiğini ve nelere dikkat etmeniz gerektiğini birlikte konuşalım."
+  desc_en: "A plain-language explanation of your blood tests, imaging reports and other results. We discuss what they mean and what, if anything, you should pay attention to."
+  book_url: ""
+
+- id: quick
+  icon: "⚡"
+  price: "₺___ / €__"
+  duration_tr: "10–15 dk kısa görüşme"
+  duration_en: "10–15 min short call"
+  title_tr: "Hızlı Danışma"
+  title_en: "Quick Consultation"
+  desc_tr: "Aklınıza takılan bir sağlık sorusu veya rahatsızlık için kısa bir görüşme. Durumunuzun aciliyetini değerlendirip sizi doğru yöne yönlendirelim."
+  desc_en: "A short call for a health question or discomfort on your mind. We assess how urgent it is and point you in the right direction."
+  book_url: ""

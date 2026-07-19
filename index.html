@@ -1,0 +1,75 @@
+---
+layout: default
+permalink: /
+---
+{% assign t = site.data.t[site.active_lang] %}
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="kicker">{{ t.hero.kicker }}</span>
+    <h1>{{ t.hero.title }}</h1>
+    <p class="lead">{{ t.hero.subtitle }}</p>
+    <div class="hero-actions">
+      <a class="btn" href="/booking/">{{ t.hero.cta_primary }}</a>
+      <a class="btn btn-ghost" href="/services/">{{ t.hero.cta_secondary }}</a>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="wrap">
+    <ul>
+      {% for item in t.trust %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>{{ t.services.title }}</h2>
+      <p class="muted">{{ t.services.intro }}</p>
+    </div>
+    <div class="service-grid">
+      {% for s in site.data.services %}{% include service-card.html service=s %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="how">
+  <div class="wrap">
+    <div class="section-head"><h2>{{ t.how.title }}</h2></div>
+    <div class="steps">
+      {% for step in t.how.steps %}
+      <div class="step">
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.body }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="notice" style="margin-top:1.8rem">{{ t.booking.pay_note }}</p>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about-teaser">
+    <div>
+      <h2>{{ t.about.title }}</h2>
+      <p class="lead">{{ t.about.body }}</p>
+      <a class="btn btn-ghost" href="/about/">{{ t.nav.about }} →</a>
+    </div>
+    <div class="about-card">
+      <div class="about-avatar" aria-hidden="true">🩺</div>
+      <p class="brand-name" style="font-family:var(--serif);font-size:1.15rem;color:var(--ink)">{{ t.about.lead }}</p>
+      <p class="muted small">{% if site.active_lang == 'tr' %}{{ site.role_tr }} · {{ site.specialty_tr }}{% else %}{{ site.role_en }} · {{ site.specialty_en }}{% endif %}</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>{{ t.hero.cta_primary }}</h2>
+    <p>{{ t.booking.intro }}</p>
+    <a class="btn" href="/booking/">{{ t.hero.cta_primary }}</a>
+  </div>
+</section>

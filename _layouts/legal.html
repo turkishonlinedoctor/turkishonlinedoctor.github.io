@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{% assign t = site.data.t[site.active_lang] %}
+<section class="page-head">
+  <div class="wrap">
+    <h1>{% if site.active_lang == 'tr' %}{{ page.head_tr }}{% else %}{{ page.head_en }}{% endif %}</h1>
+  </div>
+</section>
+<section class="page-body">
+  <div class="wrap prose">
+    <div class="draft-banner">⚠ {{ t.draft_banner }}</div>
+    {{ content }}
+    <hr>
+    <p class="muted small">{% if site.active_lang == 'tr' %}Son güncelleme: [tarih] · Veri sorumlusu: {{ site.name }}{% else %}Last updated: [date] · Data controller: {{ site.name }}{% endif %}</p>
+  </div>
+</section>

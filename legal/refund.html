@@ -1,0 +1,27 @@
+---
+layout: legal
+permalink: /legal/refund/
+head_tr: "İptal ve İade Politikası"
+head_en: "Cancellation & Refund Policy"
+---
+{% if site.active_lang == 'tr' %}
+<p>Randevularınızı aşağıdaki koşullarla iptal edebilir veya erteleyebilirsiniz.</p>
+<ul>
+  <li><strong>[24] saat</strong> öncesine kadar yapılan iptallerde ücret tam iade edilir veya randevu ücretsiz ertelenir.</li>
+  <li>Daha kısa sürede yapılan iptallerde ücretin <strong>[%…]</strong> kadarı iade edilebilir.</li>
+  <li>Görüşmeye katılmama (no-show) durumunda ücret iade edilmez.</li>
+  <li>Teknik nedenlerle gerçekleşemeyen görüşmeler ücretsiz yeniden planlanır veya tam iade edilir.</li>
+</ul>
+<p>İadeler, ödemenin alındığı yöntem (iyzico) üzerinden yapılır. Talepler: <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+<p class="muted small">Not: Mesafeli sözleşmelere ilişkin tüketici mevzuatı kapsamındaki haklarınız saklıdır.</p>
+{% else %}
+<p>You may cancel or reschedule your appointment under the following terms.</p>
+<ul>
+  <li>Cancellations made up to <strong>[24] hours</strong> in advance are fully refunded or rescheduled free of charge.</li>
+  <li>For later cancellations, <strong>[…%]</strong> of the fee may be refunded.</li>
+  <li>No refund is given for no-shows.</li>
+  <li>Consultations that fail for technical reasons are rescheduled free of charge or fully refunded.</li>
+</ul>
+<p>Refunds are issued via the original payment method (iyzico). Requests: <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+<p class="muted small">Note: your rights under consumer legislation on distance contracts are reserved.</p>
+{% endif %}
