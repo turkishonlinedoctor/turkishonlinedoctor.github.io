@@ -61,8 +61,9 @@ tr:
       hissetmesine önem veririm.
   contact:
     title: "İletişim"
-    intro: "Genel sorularınız için aşağıdaki formu kullanabilirsiniz. Randevu ve ödeme için lütfen Randevu sayfasını kullanın."
-    warning: "Lütfen bu forma şikâyet, belirti, teşhis, ilaç veya kişisel sağlık bilgisi YAZMAYIN. Bu form güvenli bir tıbbi kanal değildir; yalnızca genel sorular içindir."
+    intro: "Genel sorularınız için bize e-posta ile ulaşabilirsiniz. Randevu ve ödeme için lütfen Randevu sayfasını kullanın."
+    warning: "Lütfen bize şikâyet, belirti, teşhis, ilaç veya kişisel sağlık bilgisi YAZMAYIN. E-posta güvenli bir tıbbi kanal değildir; yalnızca genel sorular içindir."
+    email_cta: "E-posta Gönder"
     name: "Adınız"
     email: "E-posta"
     message: "Mesajınız (sağlık bilgisi olmadan)"
@@ -157,8 +158,9 @@ en:
       of me always feels in safe hands.
   contact:
     title: "Contact"
-    intro: "Use the form below for general questions. For appointments and payment, please use the Booking page."
-    warning: "Please do NOT write complaints, symptoms, diagnoses, medication or personal health information in this form. It is not a secure medical channel and is for general questions only."
+    intro: "For general questions, you can reach us by email. For appointments and payment, please use the Booking page."
+    warning: "Please do NOT send complaints, symptoms, diagnoses, medication or personal health information by email. Email is not a secure medical channel and is for general questions only."
+    email_cta: "Email us"
     name: "Your name"
     email: "Email"
     message: "Your message (no health information)"

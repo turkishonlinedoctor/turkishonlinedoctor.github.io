@@ -2,8 +2,8 @@
 #  Site settings — edit these first
 # ─────────────────────────────────────────────────────────────
 name: "Dr. Metin Burunkaya"         # ← your full name
-role_tr: "Uzman Doktor"             # ← your title in Turkish
-role_en: "Specialist Doctor"        # ← your title in English
+role_tr: "Doktor"                   # ← your title in Turkish
+role_en: "Doctor"                   # ← your title in English
 specialty_tr: "12 yıllık klinik deneyim"
 specialty_en: "12 years of clinical experience"
 photo: "/assets/img/metin.jpg"       # portrait shown on Home + About (leave "" to use the 🩺 icon)

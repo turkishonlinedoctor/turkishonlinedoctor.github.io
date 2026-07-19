@@ -3,8 +3,8 @@ layout: default
 permalink: /contact/
 head_tr: "İletişim"
 head_en: "Contact"
-desc_tr: "Dr. Metin Burunkaya ile iletişime geçin. Genel sorularınız için iletişim formu (tıbbi bilgi paylaşmayın)."
-desc_en: "Get in touch with Dr. Metin Burunkaya. Contact form for general questions (please do not share medical information)."
+desc_tr: "Dr. Metin Burunkaya ile iletişime geçin. Genel sorularınız için e-posta (tıbbi bilgi paylaşmayın)."
+desc_en: "Get in touch with Dr. Metin Burunkaya. Email us for general questions (please do not share medical information)."
 ---
 {% assign t = site.data.t[site.active_lang] %}
 
@@ -19,35 +19,11 @@ desc_en: "Get in touch with Dr. Metin Burunkaya. Contact form for general questi
   <div class="wrap">
     <div class="notice danger" style="max-width:560px">⚠ {{ t.contact.warning }}</div>
 
-    {% if site.forms.web3forms_key and site.forms.web3forms_key != "" %}
-    <form class="form" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="{{ site.forms.web3forms_key }}">
-      <input type="hidden" name="subject" value="New message from {{ site.name }} website">
-      <input type="hidden" name="from_name" value="{{ site.name }} website">
-      <!-- honeypot: bots fill this, humans don't -->
-      <input type="checkbox" name="botcheck" class="hidden" style="display:none">
-
-      <label for="name">{{ t.contact.name }}</label>
-      <input id="name" type="text" name="name" required autocomplete="name">
-
-      <label for="email">{{ t.contact.email }}</label>
-      <input id="email" type="email" name="email" required autocomplete="email">
-
-      <label for="message">{{ t.contact.message }}</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <label class="consent">
-        <input type="checkbox" required>
-        <span>{{ t.contact.consent }}</span>
-      </label>
-
-      <button class="btn" type="submit">{{ t.contact.send }}</button>
-    </form>
-    {% else %}
-    <div class="notice warn" style="max-width:560px">
-      {{ t.contact.no_key }}
-      {% if site.email != "" and site.email != "info@example.com" %}<br><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
-    </div>
-    {% endif %}
+    <p style="margin-top:1.6rem">
+      <a class="btn" href="mailto:{{ site.email }}">✉ {{ t.contact.email_cta }}</a>
+    </p>
+    <p class="muted" style="margin-top:.7rem">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </p>
   </div>
 </section>
