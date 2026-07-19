@@ -25,7 +25,7 @@ booking:
   cal_url: "https://cal.com/turkish-online-doctor-hrpjxv/30min"   # Cal.com booking link — pinned to the 30-min event so only that option shows
 payments:
   iyzilink_url: ""                  # iyziLink hosted payment page for the PLANNED services (video / second opinion / test review)
-  quick_shopier_url: ""             # Shopier product link for "Quick Consultation"; its post-payment message reveals your WhatsApp link
+  quick_shopier_url: "https://www.shopier.com/turkishonlinedoctor/49110597"   # Shopier product for "Quick Consultation"; its post-payment message reveals your WhatsApp link
   currency_note_tr: "Ödemeler güvenli iyzico sayfası üzerinden alınır. Kart bilgileriniz bu siteyle asla paylaşılmaz."
   currency_note_en: "Payments are taken on iyzico's secure page. Your card details are never shared with this website."
 forms:
