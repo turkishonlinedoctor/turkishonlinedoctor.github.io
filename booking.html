@@ -45,6 +45,11 @@ head_en: "Book an appointment"
           {% if site.email != "" and site.email != "info@example.com" %} · <a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
         </div>
         {% endif %}
+        {% if site.payments.planned_shopier_url and site.payments.planned_shopier_url != "" %}
+        <p style="margin-top:1rem">
+          <a class="btn" href="{{ site.payments.planned_shopier_url }}" target="_blank" rel="noopener">{{ t.booking.scheduled_pay_btn }}</a>
+        </p>
+        {% endif %}
       </div>
 
       <!-- Quick consultation → pay first (Shopier), WhatsApp revealed after payment -->
@@ -73,14 +78,7 @@ head_en: "Book an appointment"
 
       <div class="notice">{{ t.booking.pay_note }}</div>
 
-      {% if site.payments.iyzilink_url and site.payments.iyzilink_url != "" %}
-      <p>
-        <a class="btn" href="{{ site.payments.iyzilink_url }}" target="_blank" rel="noopener">
-          {% if site.active_lang == 'tr' %}Güvenli Ödeme (iyzico){% else %}Secure payment (iyzico){% endif %} →
-        </a>
-      </p>
-      <p class="muted small">{% if site.active_lang == 'tr' %}{{ site.payments.currency_note_tr }}{% else %}{{ site.payments.currency_note_en }}{% endif %}</p>
-      {% endif %}
+      {% include pay-badges.html %}
 
       <div class="notice danger">{{ t.emergency.text }}</div>
     </div>

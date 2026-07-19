@@ -71,13 +71,17 @@ tr:
     title: "Randevu Al"
     intro: "Aşağıdan bir hizmet ve uygun bir saat seçin. Ödeme, güvenli iyzico sayfası üzerinden alınır."
     no_cal: "Online randevu takvimi hazırlanıyor. Şimdilik randevu için bize ulaşın:"
-    pay_note: "Ödeme adımı iyzico'nun güvenli (PCI-DSS) sayfasında gerçekleşir; kart bilgileriniz bu siteye girilmez veya burada saklanmaz."
+    pay_note: "Ödeme adımı Shopier'in güvenli (PCI-DSS) sayfasında gerçekleşir; kart bilgileriniz bu siteye girilmez veya burada saklanmaz."
     scheduled_title: "Planlı görüşmeler · Google Meet"
-    scheduled_body: "Video görüşme, ikinci görüş ve tahlil değerlendirmesi için takvimden uygun bir saat seçin. Görüşme, ödeme onayının ardından Google Meet üzerinden yapılır ve bağlantı e-posta ile gönderilir."
+    scheduled_body: "Video görüşme, ikinci görüş ve tahlil değerlendirmesi için takvimden uygun bir saat seçin, ardından aşağıdaki butondan ödemeyi yapın. Görüşme, ödeme onayının ardından Google Meet üzerinden yapılır ve bağlantı e-posta ile gönderilir."
+    scheduled_pay_btn: "Öde (1.000 ₺)"
     quick_title: "Hızlı danışma · WhatsApp"
     quick_body: "Acil olmayan ama beklemek istemediğiniz durumlar için önce ödemeyi yapın; WhatsApp iletişim bilginiz ödeme sonrası güvenli Shopier onay sayfasında paylaşılır. Talebiniz sonrası 10 dakika içinde görüşme imkânı sunulur."
     pay_btn: "Öde ve Görüş"
     no_pay: "Hızlı danışma ödeme bağlantısı yakında eklenecek. Şimdilik bize ulaşın:"
+  pay:
+    secure: "Güvenli Ödeme"
+    note: "Ödemeler Shopier'in PCI-DSS uyumlu güvenli sayfasında, 3‑D Secure korumasıyla alınır. Kart bilgileriniz bu siteyle asla paylaşılmaz."
   emergency:
     text: "Bu site acil durumlar için değildir. Hayati bir aciliyet varsa lütfen hemen 112'yi (veya bulunduğunuz ülkenin acil numarasını) arayın."
   disclaimer:
@@ -161,13 +165,17 @@ en:
     title: "Book an appointment"
     intro: "Select a service and an available time below. Payment is taken on iyzico's secure page."
     no_cal: "The online booking calendar is being set up. For now, please contact us to arrange an appointment:"
-    pay_note: "The payment step happens on iyzico's secure (PCI-DSS) page; your card details are never entered on or stored by this website."
+    pay_note: "The payment step happens on Shopier's secure (PCI-DSS) page; your card details are never entered on or stored by this website."
     scheduled_title: "Planned consultations · Google Meet"
-    scheduled_body: "For a video consultation, second opinion or test-result review, pick a time from the calendar. The consultation is held on Google Meet once payment is confirmed, and the link is sent to you by email."
+    scheduled_body: "For a video consultation, second opinion or test-result review, pick a time from the calendar, then pay using the button below. The consultation is held on Google Meet once payment is confirmed, and the link is sent to you by email."
+    scheduled_pay_btn: "Pay (1,000 ₺)"
     quick_title: "Quick consultation · WhatsApp"
     quick_body: "For non-emergency matters you'd rather not wait on, complete payment first; your WhatsApp contact is then shared on Shopier's secure post-payment page. You then have the option to be connected within 10 minutes."
     pay_btn: "Pay & connect"
     no_pay: "The quick-consultation payment link will be added soon. In the meantime, contact us:"
+  pay:
+    secure: "Secure payment"
+    note: "Payments are taken on Shopier's PCI-DSS-compliant secure page, protected by 3-D Secure. Your card details are never shared with this website."
   emergency:
     text: "This site is not for emergencies. If you have a life-threatening emergency, please call 112 immediately (or your local emergency number)."
   disclaimer:

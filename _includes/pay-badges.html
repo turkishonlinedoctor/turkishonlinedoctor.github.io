@@ -1,0 +1,14 @@
+{%- assign t = site.data.t[site.active_lang] -%}
+<div class="pay-trust">
+  <div class="pay-badges" role="group" aria-label="{{ t.pay.secure }}">
+    <span class="pay-badge pay-badge--lock">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 10V7a6 6 0 1 1 12 0v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+      {{ t.pay.secure }}
+    </span>
+    <span class="pay-badge">Visa</span>
+    <span class="pay-badge">Mastercard</span>
+    <span class="pay-badge">3‑D Secure</span>
+    <span class="pay-badge">SSL</span>
+  </div>
+  <p class="muted small pay-trust-note">{{ t.pay.note }}</p>
+</div>
