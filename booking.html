@@ -6,6 +6,9 @@ head_en: "Book an appointment"
 ---
 {% assign t = site.data.t[site.active_lang] %}
 
+{%- comment -%} Cal.com handle (path after cal.com/) for the inline embed {%- endcomment -%}
+{%- assign cal_link = site.booking.cal_url | remove: "https://cal.com/" | remove: "https://app.cal.com/" | remove: "http://cal.com/" -%}
+
 <section class="page-head">
   <div class="wrap">
     <h1>{{ t.booking.title }}</h1>
@@ -15,22 +18,54 @@ head_en: "Book an appointment"
 
 <section class="page-body">
   <div class="wrap">
+    <div class="channels">
 
-    {% if site.booking.cal_url and site.booking.cal_url != "" %}
-      {%- comment -%} Cal.com booking widget. Timezones are handled automatically. {%- endcomment -%}
-      <div class="embed-frame">
-        <iframe src="{{ site.booking.cal_url }}" title="Booking calendar"
-                style="width:100%;height:640px;border:0" loading="lazy"></iframe>
+      <!-- Planned consultations → Google Meet via the scheduler -->
+      <div class="channel-card">
+        <h2>{{ t.booking.scheduled_title }}</h2>
+        <p>{{ t.booking.scheduled_body }}</p>
+        {% if site.booking.cal_url and site.booking.cal_url != "" %}
+        <div class="embed-frame">
+          <div id="cal-inline" style="width:100%;min-height:640px;overflow:auto"></div>
+        </div>
+        <p class="muted small" style="margin-top:.6rem">
+          {% if site.active_lang == 'tr' %}Takvim yüklenmezse{% else %}If the calendar does not load{% endif %},
+          <a href="{{ site.booking.cal_url }}" target="_blank" rel="noopener">{{ site.booking.cal_url | remove: "https://" }}</a>
+        </p>
+        <script type="text/javascript">
+          (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+          Cal("init", { origin: "https://cal.com" });
+          Cal("inline", { elementOrSelector: "#cal-inline", calLink: "{{ cal_link }}", layout: "month_view" });
+          Cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+        </script>
+        {% else %}
+        <div class="notice warn">
+          <strong>{{ t.booking.no_cal }}</strong><br>
+          <a href="/contact/">{{ t.nav.contact }}</a>
+          {% if site.email != "" and site.email != "info@example.com" %} · <a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
+        </div>
+        {% endif %}
       </div>
-    {% else %}
-      <div class="notice warn">
-        <strong>{{ t.booking.no_cal }}</strong><br>
-        <a href="/contact/">{{ t.nav.contact }}</a>
-        {% if site.email != "" and site.email != "info@example.com" %} · <a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
-      </div>
-    {% endif %}
 
-    <div class="prose" style="margin-top:2.4rem">
+      <!-- Quick consultation → pay first (Shopier), WhatsApp revealed after payment -->
+      <div class="channel-card channel-card--whatsapp">
+        <h2>{{ t.booking.quick_title }}</h2>
+        <p>{{ t.booking.quick_body }}</p>
+        {% if site.payments.quick_shopier_url and site.payments.quick_shopier_url != "" %}
+        <a class="btn" href="{{ site.payments.quick_shopier_url }}" target="_blank" rel="noopener">
+          <span aria-hidden="true">💬</span> {{ t.booking.pay_btn }}
+        </a>
+        {% else %}
+        <div class="notice warn">
+          {{ t.booking.no_pay }}
+          {% if site.email != "" and site.email != "info@example.com" %}<br><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+
+    <div class="prose" style="margin-top:2.6rem">
       <h2>{{ t.how.title }}</h2>
       <ol>
         {% for step in t.how.steps %}<li>{{ step.body }}</li>{% endfor %}

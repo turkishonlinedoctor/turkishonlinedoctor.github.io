@@ -33,6 +33,7 @@ permalink: /
     <div class="service-grid">
       {% for s in site.data.services %}{% include service-card.html service=s %}{% endfor %}
     </div>
+    <p class="muted small price-note">{{ t.services.eur_note }}</p>
   </div>
 </section>
 
@@ -59,7 +60,11 @@ permalink: /
       <a class="btn btn-ghost" href="/about/">{{ t.nav.about }} →</a>
     </div>
     <div class="about-card">
+      {% if site.photo and site.photo != "" %}
+      <img class="about-photo" src="{{ site.photo }}" alt="{{ t.about.lead }}" width="928" height="1152" loading="lazy">
+      {% else %}
       <div class="about-avatar" aria-hidden="true">🩺</div>
+      {% endif %}
       <p class="brand-name" style="font-family:var(--serif);font-size:1.15rem;color:var(--ink)">{{ t.about.lead }}</p>
       <p class="muted small">{% if site.active_lang == 'tr' %}{{ site.role_tr }} · {{ site.specialty_tr }}{% else %}{{ site.role_en }} · {{ site.specialty_en }}{% endif %}</p>
     </div>

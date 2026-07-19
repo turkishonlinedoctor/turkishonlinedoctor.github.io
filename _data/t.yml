@@ -29,6 +29,8 @@ tr:
     intro: "İhtiyacınıza uygun bir görüşme türü seçin. Her görüşme öncesinde ödeme, güvenli iyzico sayfası üzerinden alınır."
     book: "Randevu Al"
     from: "Başlangıç"
+    eur_note: "€ tutarları güncel Avrupa Merkez Bankası (ECB) kuruna göre yaklaşık değerlerdir. Türk kartları TL, yurt dışı kartlar ise EUR/USD olarak tahsil edilebilir."
+    pay_cta: "Öde ve Görüş"
   how:
     title: "Nasıl Çalışır?"
     steps:
@@ -37,16 +39,24 @@ tr:
       - title: "2. Güvenli ödeme yapın"
         body: "Ödeme, iyzico'nun güvenli sayfası üzerinden alınır. Kart bilgileriniz bu siteyle asla paylaşılmaz."
       - title: "3. Görüşme bağlantısını alın"
-        body: "Ödeme sonrası e-postanıza görüntülü görüşme bağlantısı gönderilir. Uygulama indirmeye gerek yoktur."
+        body: "Ödeme sonrası e-postanıza Google Meet görüşme bağlantısı gönderilir. Uygulama indirmeye gerek yoktur. (Hızlı danışma, ödeme sonrası WhatsApp üzerinden yürütülür.)"
   about:
     title: "Hakkımda"
-    lead: "Dr. Metin [Soyadı]"
+    lead: "Dr. Metin Burunkaya"
     body: >
-      12 yıldır çeşitli hastanelerde görev yapan bir hekimim. Bu platform aracılığıyla,
-      hastalarıma ve yurt dışındaki Türk topluluğuna online olarak genel tıbbi danışmanlık,
-      ikinci görüş ve tetkik değerlendirmesi sunuyorum. Amacım, karmaşık tıbbi bilgiyi
-      anlaşılır kılmak ve doğru adımı atmanıza yardımcı olmaktır.
-    note: "Bu bilgiler biyografi amaçlıdır; lütfen kendi bilgilerinizle güncelleyin."
+      İstanbul Tıp Fakültesi’nden (Çapa Tıp) 2014 yılında mezun oldum ve o günden bu yana
+      çeşitli hastanelerde görev yaptım. Bu platform aracılığıyla hastalarıma ve yurt dışındaki
+      Türk topluluğuna online genel tıbbi danışmanlık, ikinci görüş ve tetkik değerlendirmesi
+      sunuyorum. Amacım, karmaşık tıbbi bilgiyi anlaşılır kılmak ve doğru adımı atmanıza yardımcı olmaktır.
+    education_title: "Eğitim"
+    education: "İstanbul Tıp Fakültesi (Çapa Tıp Fakültesi) — 2014 mezunu."
+    experience_title: "Deneyim"
+    experience: "Acıbadem başta olmak üzere çeşitli hastanelerde 12 yılı aşkın klinik deneyim."
+    approach_title: "Yaklaşımım"
+    approach: >
+      Hastalarım beni her zaman yaklaşılabilir, nazik ve iyi kalpli bir hekim olarak tanımladı.
+      Tıbbi süreçleri sabırla ve anlaşılır bir dille açıklamaya, karşımdaki kişinin kendini güvende
+      hissetmesine önem veririm.
   contact:
     title: "İletişim"
     intro: "Genel sorularınız için aşağıdaki formu kullanabilirsiniz. Randevu ve ödeme için lütfen Randevu sayfasını kullanın."
@@ -62,6 +72,12 @@ tr:
     intro: "Aşağıdan bir hizmet ve uygun bir saat seçin. Ödeme, güvenli iyzico sayfası üzerinden alınır."
     no_cal: "Online randevu takvimi hazırlanıyor. Şimdilik randevu için bize ulaşın:"
     pay_note: "Ödeme adımı iyzico'nun güvenli (PCI-DSS) sayfasında gerçekleşir; kart bilgileriniz bu siteye girilmez veya burada saklanmaz."
+    scheduled_title: "Planlı görüşmeler · Google Meet"
+    scheduled_body: "Video görüşme, ikinci görüş ve tahlil değerlendirmesi için takvimden uygun bir saat seçin. Görüşme, ödeme onayının ardından Google Meet üzerinden yapılır ve bağlantı e-posta ile gönderilir."
+    quick_title: "Hızlı danışma · WhatsApp"
+    quick_body: "Acil olmayan ama beklemek istemediğiniz durumlar için önce ödemeyi yapın; WhatsApp iletişim bilginiz ödeme sonrası güvenli Shopier onay sayfasında paylaşılır. Talebiniz sonrası 10 dakika içinde görüşme imkânı sunulur."
+    pay_btn: "Öde ve Görüş"
+    no_pay: "Hızlı danışma ödeme bağlantısı yakında eklenecek. Şimdilik bize ulaşın:"
   emergency:
     text: "Bu site acil durumlar için değildir. Hayati bir aciliyet varsa lütfen hemen 112'yi (veya bulunduğunuz ülkenin acil numarasını) arayın."
   disclaimer:
@@ -103,6 +119,8 @@ en:
     intro: "Choose the consultation that fits your needs. Payment for each is taken beforehand on iyzico's secure page."
     book: "Book"
     from: "From"
+    eur_note: "€ amounts are approximate, based on the current European Central Bank (ECB) rate. Turkish cards are charged in TRY; foreign cards may be charged in EUR/USD."
+    pay_cta: "Pay & connect"
   how:
     title: "How it works"
     steps:
@@ -111,16 +129,24 @@ en:
       - title: "2. Pay securely"
         body: "Payment is taken on iyzico's secure page. Your card details are never shared with this website."
       - title: "3. Get your video link"
-        body: "After payment, a video-call link is emailed to you. No app download required."
+        body: "After payment, a Google Meet link is emailed to you. No app download required. (Quick consultations are paid first, then handled over WhatsApp.)"
   about:
     title: "About"
-    lead: "Dr. Metin [Surname]"
+    lead: "Dr. Metin Burunkaya"
     body: >
-      I am a physician with 12 years of experience across several hospitals. Through this
-      platform I offer online general medical guidance, second opinions and test-result
-      reviews to patients and to the Turkish community abroad. My aim is to make complex
-      medical information clear and to help you take the right next step.
-    note: "This bio is placeholder text — please replace it with your own details."
+      I graduated from Istanbul Faculty of Medicine (Çapa) in 2014 and have since worked across
+      several hospitals. Through this platform I offer online general medical guidance, second
+      opinions and test-result reviews to my patients and to the Turkish community abroad. My aim
+      is to make complex medical information clear and to help you take the right next step.
+    education_title: "Education"
+    education: "Istanbul Faculty of Medicine (Çapa) — graduated 2014."
+    experience_title: "Experience"
+    experience: "Over 12 years of clinical experience across several hospitals, including Acıbadem."
+    approach_title: "My approach"
+    approach: >
+      My patients have consistently described me as approachable, kind and kind-hearted. I take
+      care to explain medical matters patiently and in plain language, so that the person in front
+      of me always feels in safe hands.
   contact:
     title: "Contact"
     intro: "Use the form below for general questions. For appointments and payment, please use the Booking page."
@@ -136,6 +162,12 @@ en:
     intro: "Select a service and an available time below. Payment is taken on iyzico's secure page."
     no_cal: "The online booking calendar is being set up. For now, please contact us to arrange an appointment:"
     pay_note: "The payment step happens on iyzico's secure (PCI-DSS) page; your card details are never entered on or stored by this website."
+    scheduled_title: "Planned consultations · Google Meet"
+    scheduled_body: "For a video consultation, second opinion or test-result review, pick a time from the calendar. The consultation is held on Google Meet once payment is confirmed, and the link is sent to you by email."
+    quick_title: "Quick consultation · WhatsApp"
+    quick_body: "For non-emergency matters you'd rather not wait on, complete payment first; your WhatsApp contact is then shared on Shopier's secure post-payment page. You then have the option to be connected within 10 minutes."
+    pay_btn: "Pay & connect"
+    no_pay: "The quick-consultation payment link will be added soon. In the meantime, contact us:"
   emergency:
     text: "This site is not for emergencies. If you have a life-threatening emergency, please call 112 immediately (or your local emergency number)."
   disclaimer:

@@ -1,15 +1,16 @@
 # ═══════════════════════════════════════════════════════════════════
 #  Your service menu. Add/remove entries freely.
-#  - price: shown as-is (put whatever currencies you like)
+#  - price_try: the price in Turkish Lira (a number, no symbols).
+#    The EUR equivalent is shown automatically using the live ECB rate.
 #  - book_url: leave blank to use the Booking page, or paste a direct
 #    Cal.com event link / iyziLink here for a per-service button.
 # ═══════════════════════════════════════════════════════════════════
 
 - id: video
   icon: "🩺"
-  price: "₺___ / €__"
-  duration_tr: "20–30 dk görüntülü görüşme"
-  duration_en: "20–30 min video call"
+  price_try: 1000
+  duration_tr: "30 dk görüntülü görüşme"
+  duration_en: "30 min video call"
   title_tr: "Online Video Görüşme"
   title_en: "Online Video Consultation"
   desc_tr: "Genel sağlık sorunlarınız için hekimle birebir görüntülü görüşme. Endişelerinizi konuşun, sorularınızı sorun ve atmanız gereken adımlar için yönlendirme alın."
@@ -18,7 +19,7 @@
 
 - id: second-opinion
   icon: "📋"
-  price: "₺___ / €__"
+  price_try: 1000
   duration_tr: "Yazılı ve/veya görüşmeli değerlendirme"
   duration_en: "Written and/or verbal review"
   title_tr: "İkinci Görüş"
@@ -29,7 +30,7 @@
 
 - id: test-review
   icon: "🔬"
-  price: "₺___ / €__"
+  price_try: 1000
   duration_tr: "Tetkik ve tahlil değerlendirmesi"
   duration_en: "Lab & imaging report review"
   title_tr: "Tahlil & Tetkik Değerlendirme"
@@ -40,11 +41,12 @@
 
 - id: quick
   icon: "⚡"
-  price: "₺___ / €__"
-  duration_tr: "10–15 dk kısa görüşme"
-  duration_en: "10–15 min short call"
+  channel: "pay"
+  price_try: 2000
+  duration_tr: "Talebiniz sonrası 10 dakika içinde görüşme imkânı"
+  duration_en: "Option to connect within 10 minutes of your request"
   title_tr: "Hızlı Danışma"
   title_en: "Quick Consultation"
-  desc_tr: "Aklınıza takılan bir sağlık sorusu veya rahatsızlık için kısa bir görüşme. Durumunuzun aciliyetini değerlendirip sizi doğru yöne yönlendirelim."
-  desc_en: "A short call for a health question or discomfort on your mind. We assess how urgent it is and point you in the right direction."
+  desc_tr: "Aklınıza takılan bir sağlık sorusu veya ani bir rahatsızlık için beklemeden hekime ulaşın — talebiniz sonrası 10 dakika içinde görüşme imkânı sunulur. Durumunuzu değerlendirip sizi doğru yöne yönlendirelim. (Acil ve hayati durumlar için lütfen 112’yi arayın.)"
+  desc_en: "Reach a doctor without waiting for a sudden question or discomfort — with the option to be connected within 10 minutes of your request. We assess your situation and point you in the right direction. (For medical emergencies, please call 112.)"
   book_url: ""

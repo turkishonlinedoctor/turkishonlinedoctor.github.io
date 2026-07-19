@@ -79,13 +79,18 @@ All four are optional and independent — fill the matching field in `_config.ym
 | Feature | Tool | What to do | Field in `_config.yml` |
 |---|---|---|---|
 | **Payments** | **iyzico → iyziLink** | Sign up at iyzico, create a hosted **iyziLink** payment page, ask support to enable **foreign-card acceptance**. Paste the link. | `payments.iyzilink_url` |
-| **Booking** | **Cal.com** (free) | Create an account + event types, copy your public booking URL. | `booking.cal_url` |
-| **Video** | **Doxy.me** (free) | Create your provider room; put the link in your Cal.com confirmation e-mail. | `video.doxy_url` |
+| **Booking** (planned) | **Cal.com** (free) | Create an account + event types, copy your public booking URL. | `booking.cal_url` |
+| **Video** (planned) | **Google Meet** | In Cal.com, connect your Google Calendar and set each event's location to **Google Meet** — a Meet link is then added to every booking confirmation automatically. Nothing to paste here. | (auto via Cal.com) |
+| **Quick consult** | **Shopier** (pay-to-reveal) | Create a Shopier product for the Quick Consultation. In its **"Sipariş Onay Mesajı"** (post-payment confirmation message) put your WhatsApp link (`https://wa.me/9050...?text=...`). Paste the product link here. The number is shown ONLY after payment — never put it in this repo (the repo is public). | `payments.quick_shopier_url` |
 | **Contact form** | **Web3Forms** (free) | Get a free access key at web3forms.com. | `forms.web3forms_key` |
 
-**The patient flow this creates:**
-`pick a time (Cal.com)` → `pay on iyzico's secure page (iyziLink)` → `you confirm & send the Doxy.me link`.
-Because payment happens on iyzico's PCI-DSS page, **card data never reaches this site.**
+**Two patient flows this creates:**
+- **Planned** (video / second opinion / test review): `pick a time (Cal.com)` → `pay on iyzico's secure page (iyziLink)` → `you confirm & the Google Meet link is emailed automatically`.
+- **Quick consultation** (pay-to-reveal): `tap "Pay & connect"` → `pay on Shopier` → `Shopier's confirmation message reveals your WhatsApp link` → `patient messages you`.
+
+> Why Shopier for the quick one? A static site can't hide-then-reveal anything (everything in it is public), and iyziLink has no post-payment redirect or custom message. Shopier's order-confirmation message can hold your WhatsApp link and is shown only after payment — so the number stays private until paid.
+
+Because payment always happens on iyzico's PCI-DSS page, **card data never reaches this site.**
 
 > Why not Stripe/PayPal? Both are unavailable to Turkey-registered accounts, and most
 > "pay-at-booking" widgets depend on them. iyzico/PayTR are the Turkey-correct choice.

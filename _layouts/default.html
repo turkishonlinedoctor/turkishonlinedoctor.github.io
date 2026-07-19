@@ -9,5 +9,59 @@
     {{ content }}
   </main>
   {% include footer.html %}
+
+  {%- comment -%} Live TRY→EUR conversion for prices (source: ECB via frankfurter.app, cached 6h). {%- endcomment -%}
+  <script>
+  (function () {
+    var els = document.querySelectorAll('.service-price[data-try]');
+    if (!els.length) return;
+    var CACHE_KEY = 'tryeur_rate_v1', TTL = 6 * 3600 * 1000;
+    var nfTRY = new Intl.NumberFormat('tr-TR');
+    var nfEUR = new Intl.NumberFormat('tr-TR', { maximumFractionDigits: 0 });
+
+    function apply(rate) {
+      els.forEach(function (el) {
+        var amt = parseFloat(el.getAttribute('data-try'));
+        if (!amt) return;
+        var tEl = el.querySelector('.price-try');
+        var eEl = el.querySelector('.price-eur');
+        if (tEl) tEl.textContent = nfTRY.format(amt) + ' ₺';
+        if (eEl && rate) eEl.textContent = '≈ ' + nfEUR.format(amt * rate) + ' €';
+      });
+    }
+    apply(null); // format the Lira price immediately, no network needed
+
+    function cached() {
+      try {
+        var c = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+        if (c && c.r && (Date.now() - c.t) < TTL) return c.r;
+      } catch (e) {}
+      return null;
+    }
+    var r = cached();
+    if (r) { apply(r); return; }
+
+    function fromFrankfurter() {
+      return fetch('https://api.frankfurter.dev/v1/latest?base=TRY&symbols=EUR')
+        .then(function (res) { return res.json(); })
+        .then(function (d) { return d && d.rates && d.rates.EUR; });
+    }
+    function fromErApi() {
+      return fetch('https://open.er-api.com/v6/latest/TRY')
+        .then(function (res) { return res.json(); })
+        .then(function (d) { return d && d.rates && d.rates.EUR; });
+    }
+    fromFrankfurter()
+      .then(function (rate) { return rate || fromErApi(); })
+      .catch(function () { return fromErApi(); })
+      .then(function (rate) {
+        if (rate) {
+          try { localStorage.setItem(CACHE_KEY, JSON.stringify({ r: rate, t: Date.now() })); } catch (e) {}
+          apply(rate);
+        }
+      })
+      .catch(function () { /* leave the Lira price only */ });
+  })();
+  </script>
 </body>
 </html>

@@ -14,20 +14,45 @@ head_en: "About"
 </section>
 
 <section class="page-body">
-  <div class="wrap prose">
-    <p>{{ t.about.body }}</p>
+  <div class="wrap">
+    <div class="about-layout">
+      {% if site.photo and site.photo != "" %}
+      <figure class="about-figure">
+        <img src="{{ site.photo }}" alt="{{ t.about.lead }}" width="928" height="1152" loading="lazy">
+      </figure>
+      {% endif %}
 
-    <div class="notice warn">{{ t.about.note }}</div>
+      <div class="about-intro prose">
+        <p>{{ t.about.body }}</p>
 
-    <h2>{% if site.active_lang == 'tr' %}Sunduğum Hizmetler{% else %}What I offer{% endif %}</h2>
-    <ul>
-      {% for s in site.data.services %}
-      <li><strong>{% if site.active_lang == 'tr' %}{{ s.title_tr }}{% else %}{{ s.title_en }}{% endif %}</strong> — {% if site.active_lang == 'tr' %}{{ s.desc_tr }}{% else %}{{ s.desc_en }}{% endif %}</li>
-      {% endfor %}
-    </ul>
+        <dl class="credentials">
+          <div>
+            <dt>{{ t.about.education_title }}</dt>
+            <dd>{{ t.about.education }}</dd>
+          </div>
+          <div>
+            <dt>{{ t.about.experience_title }}</dt>
+            <dd>{{ t.about.experience }}</dd>
+          </div>
+          <div>
+            <dt>{{ t.about.approach_title }}</dt>
+            <dd>{{ t.about.approach }}</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
 
-    <div class="notice danger">{{ t.disclaimer.short }} {{ t.emergency.text }}</div>
+    <div class="prose" style="margin-top:2.6rem">
+      <h2>{% if site.active_lang == 'tr' %}Sunduğum Hizmetler{% else %}What I offer{% endif %}</h2>
+      <ul>
+        {% for s in site.data.services %}
+        <li><strong>{% if site.active_lang == 'tr' %}{{ s.title_tr }}{% else %}{{ s.title_en }}{% endif %}</strong> — {% if site.active_lang == 'tr' %}{{ s.desc_tr }}{% else %}{{ s.desc_en }}{% endif %}</li>
+        {% endfor %}
+      </ul>
 
-    <p style="margin-top:2rem"><a class="btn" href="/booking/">{{ t.hero.cta_primary }}</a></p>
+      <div class="notice danger">{{ t.disclaimer.short }} {{ t.emergency.text }}</div>
+
+      <p style="margin-top:2rem"><a class="btn" href="/booking/">{{ t.hero.cta_primary }}</a></p>
+    </div>
   </div>
 </section>

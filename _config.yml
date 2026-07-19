@@ -1,32 +1,38 @@
 # ─────────────────────────────────────────────────────────────
 #  Site settings — edit these first
 # ─────────────────────────────────────────────────────────────
-name: "Dr. Metin [Soyadı]"          # ← your full name
+name: "Dr. Metin Burunkaya"         # ← your full name
 role_tr: "Uzman Doktor"             # ← your title in Turkish
 role_en: "Specialist Doctor"        # ← your title in English
 specialty_tr: "12 yıllık klinik deneyim"
 specialty_en: "12 years of clinical experience"
+photo: "/assets/img/metin.jpg"       # portrait shown on Home + About (leave "" to use the 🩺 icon)
 
 email: "info@example.com"           # ← contact email shown on the site
 phone: ""                           # optional, e.g. "+90 5xx xxx xx xx"
+# WhatsApp number is intentionally NOT stored here. The repo is public, so putting it
+# here would expose it before payment. It lives ONLY in Shopier's post-payment
+# "Sipariş Onay Mesajı", which reveals your wa.me link after the patient pays.
 
 # Production URL. On GitHub Pages without a custom domain this is
 # https://<username>.github.io/<repo>  → set baseurl to "/<repo>".
 # With a custom domain (recommended) set url to your domain and baseurl to "".
-url: "https://example.com"
+url: "https://turkishonlinedoctor.com"
 baseurl: ""
 
 # Third-party integrations (fill in when ready — see README.md)
 booking:
-  cal_url: ""                       # e.g. https://cal.com/dr-metin  (Cal.com booking link)
+  cal_url: "https://cal.com/turkish-online-doctor-hrpjxv"   # Cal.com public booking link
 payments:
-  iyzilink_url: ""                  # your iyziLink hosted payment page URL
+  iyzilink_url: ""                  # iyziLink hosted payment page for the PLANNED services (video / second opinion / test review)
+  quick_shopier_url: ""             # Shopier product link for "Quick Consultation"; its post-payment message reveals your WhatsApp link
   currency_note_tr: "Ödemeler güvenli iyzico sayfası üzerinden alınır. Kart bilgileriniz bu siteyle asla paylaşılmaz."
   currency_note_en: "Payments are taken on iyzico's secure page. Your card details are never shared with this website."
 forms:
   web3forms_key: ""                 # free access key from https://web3forms.com (contact form)
 video:
-  doxy_url: ""                      # your Doxy.me room link, sent after booking
+  platform_tr: "Google Meet"        # planned consultations are held on Google Meet
+  platform_en: "Google Meet"        # (Cal.com creates the Meet link automatically once you connect your Google Calendar)
 
 social:
   linkedin: ""

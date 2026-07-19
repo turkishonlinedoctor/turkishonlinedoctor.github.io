@@ -1,18 +1,30 @@
 {%- comment -%} Expects `include.service` (one entry from _data/services.yml) {%- endcomment -%}
 {%- assign s = include.service -%}
 {%- assign t = site.data.t[site.active_lang] -%}
-{%- if s.book_url and s.book_url != "" -%}
+
+{%- comment -%} Decide where the button goes. {%- endcomment -%}
+{%- assign book_href = "/booking/" -%}
+{%- assign book_label = t.services.book -%}
+{%- assign book_external = false -%}
+{%- if s.channel == "pay" and site.payments.quick_shopier_url and site.payments.quick_shopier_url != "" -%}
+  {%- comment -%} Pay-first: goes to Shopier; the WhatsApp link is revealed only after payment. {%- endcomment -%}
+  {%- assign book_href = site.payments.quick_shopier_url -%}
+  {%- assign book_label = t.services.pay_cta -%}
+  {%- assign book_external = true -%}
+{%- elsif s.book_url and s.book_url != "" -%}
   {%- assign book_href = s.book_url -%}
-{%- else -%}
-  {%- assign book_href = "/booking/" -%}
 {%- endif -%}
-<article class="service-card" id="{{ s.id }}">
+
+<article class="service-card{% if s.channel == 'pay' %} service-card--whatsapp{% endif %}" id="{{ s.id }}">
   <div class="service-icon" aria-hidden="true">{{ s.icon }}</div>
   <h3 class="service-title">{% if site.active_lang == 'tr' %}{{ s.title_tr }}{% else %}{{ s.title_en }}{% endif %}</h3>
   <p class="service-meta">{% if site.active_lang == 'tr' %}{{ s.duration_tr }}{% else %}{{ s.duration_en }}{% endif %}</p>
   <p class="service-desc">{% if site.active_lang == 'tr' %}{{ s.desc_tr }}{% else %}{{ s.desc_en }}{% endif %}</p>
   <div class="service-foot">
-    <span class="service-price"><span class="muted small">{{ t.services.from }}</span> {{ s.price }}</span>
-    <a class="btn btn-small" href="{{ book_href }}">{{ t.services.book }}</a>
+    <span class="service-price" data-try="{{ s.price_try }}">
+      <span class="price-try">{{ s.price_try }} ₺</span>
+      <span class="price-eur muted small"></span>
+    </span>
+    <a class="btn btn-small" href="{{ book_href }}"{% if book_external %} target="_blank" rel="noopener"{% endif %}>{{ book_label }}</a>
   </div>
 </article>
