@@ -20,7 +20,7 @@ desc_en: "Dr. Metin Burunkaya — Istanbul Faculty of Medicine (Çapa), graduate
     <div class="about-layout">
       {% if site.photo and site.photo != "" %}
       <figure class="about-figure">
-        <img src="{{ site.photo }}" alt="{{ t.about.lead }}" width="928" height="1152" loading="lazy">
+        <img src="{{ site.photo }}" alt="{{ t.about.lead }}" width="600" height="745" loading="eager" fetchpriority="high">
       </figure>
       {% endif %}
 

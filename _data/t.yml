@@ -46,14 +46,14 @@ tr:
     title: "Hakkımda"
     lead: "Dr. Metin Burunkaya"
     body: >
-      İstanbul Tıp Fakültesi’nden (Çapa Tıp) 2014 yılında mezun oldum ve o günden bu yana
+      İstanbul Tıp Fakültesi’nden (Çapa) 2014 yılında mezun oldum ve o günden bu yana
       çeşitli hastanelerde görev yaptım. Bu platform aracılığıyla hastalarıma ve yurt dışındaki
       Türk topluluğuna online genel tıbbi danışmanlık, ikinci görüş ve tetkik değerlendirmesi
       sunuyorum. Amacım, karmaşık tıbbi bilgiyi anlaşılır kılmak ve doğru adımı atmanıza yardımcı olmaktır.
     education_title: "Eğitim"
-    education: "İstanbul Tıp Fakültesi (Çapa Tıp Fakültesi) — 2014 mezunu."
+    education: "İstanbul Tıp Fakültesi (Çapa) — 2014 mezunu."
     experience_title: "Deneyim"
-    experience: "Acıbadem başta olmak üzere çeşitli hastanelerde 10 yılı aşkın klinik deneyim."
+    experience: "Acıbadem dâhil çeşitli hastanelerde 10 yılı aşkın klinik deneyim."
     approach_title: "Yaklaşımım"
     approach: >
       Hastalarım beni her zaman yaklaşılabilir, nazik ve iyi kalpli bir hekim olarak tanımladı.
@@ -79,8 +79,8 @@ tr:
     scheduled_body: "Video görüşme, ikinci görüş ve tahlil değerlendirmesi için takvimden uygun bir saat seçin, ardından aşağıdaki butondan ödemeyi yapın. Görüşme, ödeme onayının ardından Google Meet üzerinden yapılır ve bağlantı e-posta ile gönderilir."
     scheduled_pay_btn: "Öde (1.000 ₺)"
     quick_title: "Hızlı danışma · WhatsApp"
-    quick_body: "Acil olmayan ama beklemek istemediğiniz durumlar için önce ödemeyi yapın; WhatsApp iletişim bilginiz ödeme sonrası güvenli Shopier onay sayfasında paylaşılır. Talebiniz sonrası 10 dakika içinde görüşme imkânı sunulur."
-    pay_btn: "Öde ve Görüş"
+    quick_body: "Acil olmayan ama beklemek istemediğiniz durumlar için önce ödemeyi yapın; ödeme sonrası, güvenli Shopier onay sayfasında bize ulaşabileceğiniz WhatsApp bağlantısı size gösterilir. Talebiniz sonrası 10 dakika içinde görüşme imkânı sunulur."
+    pay_btn: "Öde (2.000 ₺)"
     no_pay: "Hızlı danışma ödeme bağlantısı yakında eklenecek. Şimdilik bize ulaşın:"
   pay:
     secure: "Güvenli Ödeme"
@@ -176,8 +176,8 @@ en:
     scheduled_body: "For a video consultation, second opinion or test-result review, pick a time from the calendar, then pay using the button below. The consultation is held on Google Meet once payment is confirmed, and the link is sent to you by email."
     scheduled_pay_btn: "Pay (1,000 ₺)"
     quick_title: "Quick consultation · WhatsApp"
-    quick_body: "For non-emergency matters you'd rather not wait on, complete payment first; your WhatsApp contact is then shared on Shopier's secure post-payment page. You then have the option to be connected within 10 minutes."
-    pay_btn: "Pay & connect"
+    quick_body: "For non-emergency matters you'd rather not wait on, complete payment first; after payment, a WhatsApp link to reach us is shown on Shopier's secure confirmation page. You then have the option to be connected within 10 minutes."
+    pay_btn: "Pay (2,000 ₺)"
     no_pay: "The quick-consultation payment link will be added soon. In the meantime, contact us:"
   pay:
     secure: "Secure payment"

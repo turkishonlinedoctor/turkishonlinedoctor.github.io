@@ -42,7 +42,11 @@
 <meta property="og:description" content="{{ page_desc }}">
 <meta property="og:url" content="{{ canonical_url | absolute_url }}">
 <meta property="og:image" content="{{ share_image }}">
+<meta property="og:image:alt" content="{{ site.name }}">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="745">
 <meta property="og:locale" content="{% if site.active_lang == 'tr' %}tr_TR{% else %}en_US{% endif %}">
+<meta property="og:locale:alternate" content="{% if site.active_lang == 'tr' %}en_US{% else %}tr_TR{% endif %}">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -57,7 +61,7 @@
 
 {%- if base_url == '/' %}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Physician","name":"{{ site.name }}","url":"{{ '/' | absolute_url }}","image":"{{ share_image }}","availableLanguage":["Turkish","English"],"areaServed":"Worldwide","description":"{{ t.hero.subtitle }}"}
+{"@context":"https://schema.org","@type":"IndividualPhysician","name":"{{ site.name }}","url":"{{ '/' | absolute_url }}","image":"{{ share_image }}","knowsLanguage":["tr","en"],"availableLanguage":["Turkish","English"],"areaServed":"Worldwide","alumniOf":{"@type":"CollegeOrUniversity","name":"İstanbul Tıp Fakültesi (Çapa)"},"description":"{{ t.hero.subtitle }}"}
 </script>
 {%- endif %}
 

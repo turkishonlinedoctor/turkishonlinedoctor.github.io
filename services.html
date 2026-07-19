@@ -17,6 +17,7 @@ desc_en: "Online video consultation, second opinion, test-result review and quic
 
 <section class="page-body">
   <div class="wrap">
+    <h2 class="visually-hidden">{{ t.services.title }}</h2>
     <div class="service-grid">
       {% for s in site.data.services %}{% include service-card.html service=s %}{% endfor %}
     </div>
