@@ -7,6 +7,7 @@ role_en: "Doctor"                   # ← your title in English
 specialty_tr: "12 yıllık klinik deneyim"
 specialty_en: "12 years of clinical experience"
 photo: "/assets/img/metin.jpg"       # portrait shown on Home + About (leave "" to use the 🩺 icon)
+logo: "/assets/img/logo.jpg"         # brand logo shown in the header + used as favicon (leave "" to use the 🩺 icon)
 
 email: "turkishonlinedoctor@gmail.com"   # ← contact email shown on the site
 phone: ""                           # optional, e.g. "+90 5xx xxx xx xx"
@@ -31,6 +32,9 @@ forms:
 video:
   platform_tr: "Google Meet"        # planned consultations are held on Google Meet
   platform_en: "Google Meet"        # (Cal.com creates the Meet link automatically once you connect your Google Calendar)
+
+analytics:
+  ga4_id: "G-CLJBLY9BDK"            # Google Analytics 4 Measurement ID (gtag.js) — loaded site-wide via head.html
 
 social:
   linkedin: ""

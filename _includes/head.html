@@ -61,5 +61,20 @@
 </script>
 {%- endif %}
 
+{%- if site.logo and site.logo != "" -%}
+<link rel="icon" href="{{ site.logo }}">
+{%- else -%}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>">
+{%- endif -%}
 <link rel="stylesheet" href="/assets/css/main.css">
+
+{%- if site.analytics.ga4_id and site.analytics.ga4_id != "" %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.ga4_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.analytics.ga4_id }}');
+</script>
+{%- endif %}

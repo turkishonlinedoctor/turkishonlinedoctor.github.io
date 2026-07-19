@@ -20,7 +20,11 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="/">
+      {% if site.logo and site.logo != "" %}
+      <img class="brand-logo" src="{{ site.logo }}" alt="{{ site.name }}" width="1024" height="1024">
+      {% else %}
       <span class="brand-mark">🩺</span>
+      {% endif %}
       <span class="brand-text">
         <span class="brand-name">{{ site.name }}</span>
         <span class="brand-role">{% if site.active_lang == 'tr' %}{{ site.role_tr }}{% else %}{{ site.role_en }}{% endif %}</span>
