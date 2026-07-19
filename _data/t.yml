@@ -18,11 +18,11 @@ tr:
   hero:
     kicker: "Online Doktor Danışmanlığı"
     title: "Güvenilir tıbbi görüş, artık bir tık uzağınızda"
-    subtitle: "12 yıllık hastane deneyimine sahip bir hekimle online görüşün; ikinci görüş alın, tahlillerinizi değerlendirin veya kısa bir danışma için görüşme planlayın."
+    subtitle: "10 yılı aşkın hastane deneyimine sahip bir hekimle online görüşün; ikinci görüş alın, tahlillerinizi değerlendirin veya kısa bir danışma için görüşme planlayın."
     cta_primary: "Randevu Al"
     cta_secondary: "Hizmetleri İncele"
   trust:
-    - "12+ yıl klinik deneyim"
+    - "10 yılı aşkın klinik deneyim"
     - "Gizli ve güvenli görüşme"
     - "Türkçe ve İngilizce"
     - "Güvenli online ödeme"
@@ -53,7 +53,7 @@ tr:
     education_title: "Eğitim"
     education: "İstanbul Tıp Fakültesi (Çapa Tıp Fakültesi) — 2014 mezunu."
     experience_title: "Deneyim"
-    experience: "Acıbadem başta olmak üzere çeşitli hastanelerde 12 yılı aşkın klinik deneyim."
+    experience: "Acıbadem başta olmak üzere çeşitli hastanelerde 10 yılı aşkın klinik deneyim."
     approach_title: "Yaklaşımım"
     approach: >
       Hastalarım beni her zaman yaklaşılabilir, nazik ve iyi kalpli bir hekim olarak tanımladı.
@@ -115,11 +115,11 @@ en:
   hero:
     kicker: "Online Doctor Consultation"
     title: "Trusted medical guidance, now one click away"
-    subtitle: "Speak online with a physician who has 12 years of hospital experience — get a second opinion, have your test results reviewed, or book a short consultation."
+    subtitle: "Speak online with a physician who has over 10 years of hospital experience — get a second opinion, have your test results reviewed, or book a short consultation."
     cta_primary: "Book an appointment"
     cta_secondary: "See services"
   trust:
-    - "12+ years of clinical experience"
+    - "Over 10 years of clinical experience"
     - "Private and secure consultation"
     - "Turkish and English"
     - "Secure online payment"
@@ -150,7 +150,7 @@ en:
     education_title: "Education"
     education: "Istanbul Faculty of Medicine (Çapa) — graduated 2014."
     experience_title: "Experience"
-    experience: "Over 12 years of clinical experience across several hospitals, including Acıbadem."
+    experience: "Over 10 years of clinical experience across several hospitals, including Acıbadem."
     approach_title: "My approach"
     approach: >
       My patients have consistently described me as approachable, warm and kind-hearted. I take

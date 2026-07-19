@@ -4,8 +4,8 @@
 name: "Dr. Metin Burunkaya"         # ← your full name
 role_tr: "Doktor"                   # ← your title in Turkish
 role_en: "Doctor"                   # ← your title in English
-specialty_tr: "12 yıllık klinik deneyim"
-specialty_en: "12 years of clinical experience"
+specialty_tr: "10 yılı aşkın klinik deneyim"
+specialty_en: "Over 10 years of clinical experience"
 photo: "/assets/img/metin.jpg"       # portrait shown on Home + About (leave "" to use the 🩺 icon)
 logo: ""                             # brand logo in header + favicon; empty = use the 🩺 icon (file kept at /assets/img/logo.jpg for later)
 
