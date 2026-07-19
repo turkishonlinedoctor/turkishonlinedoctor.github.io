@@ -8,7 +8,7 @@ specialty_tr: "12 yıllık klinik deneyim"
 specialty_en: "12 years of clinical experience"
 photo: "/assets/img/metin.jpg"       # portrait shown on Home + About (leave "" to use the 🩺 icon)
 
-email: "info@example.com"           # ← contact email shown on the site
+email: "turkishonlinedoctor@gmail.com"   # ← contact email shown on the site
 phone: ""                           # optional, e.g. "+90 5xx xxx xx xx"
 # WhatsApp number is intentionally NOT stored here. The repo is public, so putting it
 # here would expose it before payment. It lives ONLY in Shopier's post-payment
@@ -26,8 +26,6 @@ booking:
 payments:
   planned_shopier_url: "https://www.shopier.com/turkishonlinedoctor/49111028"  # Shopier product for the 1000 TL PLANNED services (video / second opinion / test review)
   quick_shopier_url: "https://www.shopier.com/turkishonlinedoctor/49110597"    # Shopier product for "Quick Consultation" (2000 TL); post-payment message reveals your WhatsApp link
-  currency_note_tr: "Ödemeler güvenli iyzico sayfası üzerinden alınır. Kart bilgileriniz bu siteyle asla paylaşılmaz."
-  currency_note_en: "Payments are taken on iyzico's secure page. Your card details are never shared with this website."
 forms:
   web3forms_key: ""                 # free access key from https://web3forms.com (contact form)
 video:
@@ -43,7 +41,7 @@ social:
 # ─────────────────────────────────────────────────────────────
 languages: ["tr", "en"]
 default_lang: "tr"
-exclude_from_localization: ["assets", "images", "favicon", "CNAME", ".nojekyll", "robots.txt"]
+exclude_from_localization: ["assets", "images", "favicon", "CNAME", ".nojekyll", "robots.txt", "sitemap.xml"]
 parallel_localization: false        # safer/deterministic on Windows; fine for a small site
 
 # ─────────────────────────────────────────────────────────────

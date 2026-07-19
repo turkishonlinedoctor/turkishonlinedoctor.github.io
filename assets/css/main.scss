@@ -14,7 +14,7 @@
   --gold:     #c19a4b;
   --ink:      #1c2b2a;
   --body:     #3a4a49;
-  --muted:    #6b7b7a;
+  --muted:    #566766;
   --line:     #e4e9e8;
   --bg:       #fbfbf9;
   --card:     #ffffff;
@@ -105,7 +105,15 @@ img { max-width: 100%; height: auto; }
 }
 .lang-switch:hover { color: var(--ink); border-color: var(--muted); text-decoration: none; }
 
+.nav-toggle { display: none; }
 .nav-toggle-label { display: none; }
+
+/* Skip-to-content link (visible on keyboard focus) */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--teal-700); color: #fff; padding: .6rem 1rem; border-radius: 0 0 8px 0;
+}
+.skip-link:focus { left: 0; }
 
 /* ============================================================
    Hero
@@ -340,4 +348,7 @@ img { max-width: 100%; height: auto; }
   .about-layout { grid-template-columns: 1fr; }
   .about-figure { max-width: 320px; }
   .channels { grid-template-columns: 1fr; }
+  /* keep the menu checkbox visually hidden but keyboard-focusable on mobile */
+  .nav-toggle { display: inline-block; position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .nav-toggle:focus-visible ~ .nav-toggle-label { outline: 2px solid var(--teal-600); outline-offset: 3px; border-radius: 4px; }
 }

@@ -3,7 +3,7 @@
 #  - price_try: the price in Turkish Lira (a number, no symbols).
 #    The EUR equivalent is shown automatically using the live ECB rate.
 #  - book_url: leave blank to use the Booking page, or paste a direct
-#    Cal.com event link / iyziLink here for a per-service button.
+#    Cal.com event link / Shopier product link here for a per-service button.
 # ═══════════════════════════════════════════════════════════════════
 
 - id: video

@@ -2,8 +2,8 @@
 
 A bilingual (Turkish / English) Jekyll website for a Turkey-based doctor, designed
 around a **safe payment model**: the site never touches card data — patients pay on
-**iyzico's** secure hosted page, book through a free scheduler, and meet over a
-browser-based video link.
+**Shopier's** secure hosted page, book through a free scheduler (Cal.com), and meet
+over Google Meet.
 
 > ⚠️ **Read `COMPLIANCE` below before going live.** In Turkey, formal remote clinical
 > care is regulated (2022 *Uzaktan Sağlık Hizmetleri* Yönetmeliği). This site is built
@@ -78,23 +78,23 @@ All four are optional and independent — fill the matching field in `_config.ym
 
 | Feature | Tool | What to do | Field in `_config.yml` |
 |---|---|---|---|
-| **Payments** | **iyzico → iyziLink** | Sign up at iyzico, create a hosted **iyziLink** payment page, ask support to enable **foreign-card acceptance**. Paste the link. | `payments.iyzilink_url` |
-| **Booking** (planned) | **Cal.com** (free) | Create an account + event types, copy your public booking URL. | `booking.cal_url` |
-| **Video** (planned) | **Google Meet** | In Cal.com, connect your Google Calendar and set each event's location to **Google Meet** — a Meet link is then added to every booking confirmation automatically. Nothing to paste here. | (auto via Cal.com) |
+| **Payments (planned)** | **Shopier** | Create a Shopier product for the 1000 TL planned services and paste its link. | `payments.planned_shopier_url` |
+| **Booking** (planned) | **Cal.com** (free) | Create an account + a 30-min event, copy your public booking URL. | `booking.cal_url` |
+| **Video** (planned) | **Google Meet** | In Cal.com, connect your Google Calendar and set the event location to **Google Meet** — a Meet link is added to every booking automatically. Nothing to paste here. | (auto via Cal.com) |
 | **Quick consult** | **Shopier** (pay-to-reveal) | Create a Shopier product for the Quick Consultation. In its **"Sipariş Onay Mesajı"** (post-payment confirmation message) put your WhatsApp link (`https://wa.me/9050...?text=...`). Paste the product link here. The number is shown ONLY after payment — never put it in this repo (the repo is public). | `payments.quick_shopier_url` |
 | **Contact form** | **Web3Forms** (free) | Get a free access key at web3forms.com. | `forms.web3forms_key` |
 
 **Two patient flows this creates:**
-- **Planned** (video / second opinion / test review): `pick a time (Cal.com)` → `pay on iyzico's secure page (iyziLink)` → `you confirm & the Google Meet link is emailed automatically`.
+- **Planned** (video / second opinion / test review): `pick a time (Cal.com)` → `pay on Shopier` → `you confirm the booking & the Google Meet link is emailed automatically`. Set the Cal.com event to "requires confirmation" so you approve after seeing the payment.
 - **Quick consultation** (pay-to-reveal): `tap "Pay & connect"` → `pay on Shopier` → `Shopier's confirmation message reveals your WhatsApp link` → `patient messages you`.
 
-> Why Shopier for the quick one? A static site can't hide-then-reveal anything (everything in it is public), and iyziLink has no post-payment redirect or custom message. Shopier's order-confirmation message can hold your WhatsApp link and is shown only after payment — so the number stays private until paid.
+> Both use **Shopier** because it onboards Turkey-based merchants, allows consultation services, and (for the quick one) its order-confirmation message can hold your WhatsApp link, shown only after payment.
 
-Because payment always happens on iyzico's PCI-DSS page, **card data never reaches this site.**
+Because payment always happens on Shopier's PCI-DSS page, **card data never reaches this site.**
 
-> Why not Stripe/PayPal? Both are unavailable to Turkey-registered accounts, and most
-> "pay-at-booking" widgets depend on them. iyzico/PayTR are the Turkey-correct choice.
-> Start as an *individual*; register a *şahıs şirketi* later for lower fees + invoicing.
+> Why not Stripe/PayPal? Both are unavailable to Turkey-registered accounts. Shopier /
+> iyzico / PayTR are the Turkey-correct choices; a globally-branded checkout (Stripe)
+> would require forming a foreign company — only worth it at higher volume.
 
 ---
 

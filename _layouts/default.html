@@ -4,6 +4,8 @@
   {% include head.html %}
 </head>
 <body>
+  {%- assign t = site.data.t[site.active_lang] -%}
+  <a href="#main" class="skip-link">{{ t.skip_to_content }}</a>
   {% include header.html %}
   <main id="main">
     {{ content }}
