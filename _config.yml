@@ -22,7 +22,7 @@ baseurl: ""
 
 # Third-party integrations (fill in when ready — see README.md)
 booking:
-  cal_url: "https://cal.com/turkish-online-doctor-hrpjxv"   # Cal.com public booking link
+  cal_url: "https://cal.com/turkish-online-doctor-hrpjxv/30min"   # Cal.com booking link — pinned to the 30-min event so only that option shows
 payments:
   iyzilink_url: ""                  # iyziLink hosted payment page for the PLANNED services (video / second opinion / test review)
   quick_shopier_url: ""             # Shopier product link for "Quick Consultation"; its post-payment message reveals your WhatsApp link
