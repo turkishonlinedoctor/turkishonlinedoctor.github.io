@@ -7,7 +7,7 @@ role_en: "Doctor"                   # ← your title in English
 specialty_tr: "12 yıllık klinik deneyim"
 specialty_en: "12 years of clinical experience"
 photo: "/assets/img/metin.jpg"       # portrait shown on Home + About (leave "" to use the 🩺 icon)
-logo: "/assets/img/logo.jpg"         # brand logo shown in the header + used as favicon (leave "" to use the 🩺 icon)
+logo: ""                             # brand logo in header + favicon; empty = use the 🩺 icon (file kept at /assets/img/logo.jpg for later)
 
 email: "turkishonlinedoctor@gmail.com"   # ← contact email shown on the site
 phone: ""                           # optional, e.g. "+90 5xx xxx xx xx"
