@@ -184,6 +184,9 @@ img { max-width: 100%; height: auto; }
   background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
   padding: 1.8rem; box-shadow: var(--shadow); text-align: center;
 }
+.about-facts { list-style: none; margin: .4rem 0 1.4rem; padding: 0; display: grid; gap: .55rem; }
+.about-facts li { font-size: .95rem; color: var(--body); }
+.about-facts strong { color: var(--teal-700); }
 .about-avatar {
   width: 96px; height: 96px; border-radius: 50%; margin: 0 auto 1rem;
   background: radial-gradient(circle at 30% 30%, var(--teal-100), var(--teal-600));
