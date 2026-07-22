@@ -47,6 +47,6 @@
   duration_en: "Option to connect within 10 minutes of your request"
   title_tr: "Hızlı Danışma"
   title_en: "Quick Consultation"
-  desc_tr: "Aklınıza takılan bir sağlık sorusu veya ani bir rahatsızlık için beklemeden hekime ulaşın — talebiniz sonrası 10 dakika içinde görüşme imkânı sunulur. Durumunuzu değerlendirip sizi doğru yöne yönlendirelim. (Acil ve hayati durumlar için lütfen 112’yi arayın.)"
-  desc_en: "Reach a doctor without waiting for a sudden question or discomfort — with the option to be connected within 10 minutes of your request. We assess your situation and point you in the right direction. (For medical emergencies, please call 112.)"
+  desc_tr: "Aklınıza takılan bir sağlık sorusu veya ani bir rahatsızlık için beklemeden hekime ulaşın — talebiniz sonrası 10 dakika içinde görüşme imkânı sunulur. Durumunuzu değerlendirip sizi doğru yöne yönlendirelim. (Acil ve hayati durumlar için bulunduğunuz ülkenin acil çağrı hattını arayın.)"
+  desc_en: "Reach a doctor without waiting for a sudden question or discomfort — with the option to be connected within 10 minutes of your request. We assess your situation and point you in the right direction. (For medical emergencies, call your local emergency number.)"
   book_url: ""

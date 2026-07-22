@@ -86,7 +86,7 @@ tr:
     secure: "Güvenli Ödeme"
     note: "Ödemeler Shopier'in PCI-DSS uyumlu güvenli sayfasında, 3‑D Secure korumasıyla alınır. Kart bilgileriniz bu siteyle asla paylaşılmaz."
   emergency:
-    text: "Bu site acil durumlar için değildir. Hayati bir aciliyet varsa lütfen hemen 112'yi (veya bulunduğunuz ülkenin acil numarasını) arayın."
+    text: "Bu site acil durumlar için değildir. Hayati bir aciliyet varsa lütfen bulunduğunuz ülkenin acil çağrı hattını arayın (ör. Türkiye ve AB 112, İngiltere 999, ABD 911). Ülkelere göre acil numaralar: <a href='https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers' target='_blank' rel='noopener'>liste</a>."
   disclaimer:
     short: "Bu sitedeki içerik genel bilgilendirme amaçlıdır ve yüz yüze muayenenin yerini tutmaz; bireysel teşhis veya tedavi niteliği taşımaz."
   footer:
@@ -183,7 +183,7 @@ en:
     secure: "Secure payment"
     note: "Payments are taken on Shopier's PCI-DSS-compliant secure page, protected by 3-D Secure. Your card details are never shared with this website."
   emergency:
-    text: "This site is not for emergencies. If you have a life-threatening emergency, please call 112 immediately (or your local emergency number)."
+    text: "This site is not for emergencies. If you have a life-threatening emergency, please call your local emergency number (e.g. 112 in Turkey and the EU, 999 in the UK, 911 in the US). Emergency numbers by country: <a href='https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers' target='_blank' rel='noopener'>list</a>."
   disclaimer:
     short: "Content on this site is for general information only, is not a substitute for an in-person examination, and does not constitute individual diagnosis or treatment."
   footer:

@@ -111,7 +111,7 @@ Because payment always happens on Shopier's PCI-DSS page, **card data never reac
 - [ ] Be cautious with patients **physically located abroad** — check licensing in their
       country and your **indemnity insurance** territorial cover.
 - [ ] Fill in the bracketed `[ ]` placeholders in the legal pages (dates, refund window).
-- [ ] Add a "not for emergencies — call 112" line everywhere consultations are offered
+- [ ] Add a "not for emergencies — call your local emergency number" line everywhere consultations are offered
       (already in the footer and disclaimer).
 
 *This README and the legal templates are general information, not legal advice.*
